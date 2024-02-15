@@ -1,4 +1,4 @@
-import { calculateBowlingScore } from './bowling-score'
+import { calculateBowlingScore } from 'src/bowling-score'
 
 describe('calculateBowlingScore', () => {
     // it('throws an error when the input/arg is not an integer', () => {
@@ -9,9 +9,12 @@ describe('calculateBowlingScore', () => {
     //         'Number 0 cannot be passed',
     //     )
     // })
-    // it('returns the Roman Numeral Value of the inputed integer', () => {
-    //     expect(calculateBowlingScore(33)).toBe('XXXIII')
-    //     expect(calculateBowlingScore(2012)).toBe('MMXII')
-    //     expect(calculateBowlingScore(1996)).toBe('MCMXCVI')
-    // })
+
+    it('returns a number which is the sum of bowling scores', () => {
+        expect(() =>
+            calculateBowlingScore([
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            ]),
+        ).toBe(0)
+    })
 })
