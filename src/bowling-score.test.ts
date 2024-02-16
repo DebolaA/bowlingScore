@@ -1,20 +1,43 @@
-import { calculateBowlingScore } from 'src/bowling-score'
+import { calculateBowlingScore } from './bowling-score'
 
 describe('calculateBowlingScore', () => {
-    // it('throws an error when the input/arg is not an integer', () => {
-    //     expect(() => calculateBowlingScore(12.3)).toThrow('Number is required')
-    // })
-    // it('throws an error when the input/arg is 0', () => {
-    //     expect(() => calculateBowlingScore(0)).toThrow(
-    //         'Number 0 cannot be passed',
-    //     )
-    // })
-
     it('returns a number which is the sum of bowling scores', () => {
         expect(() =>
             calculateBowlingScore([
                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             ]),
-        ).toBe(0)
+        ).toStrictEqual(0)
+    })
+
+    it('returns a number which is the sum of bowling scores', () => {
+        expect(() =>
+            calculateBowlingScore([
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 1, 0,
+            ]),
+        ).toStrictEqual(12)
+    })
+
+    it('returns a number which is the sum of bowling scores', () => {
+        expect(() =>
+            calculateBowlingScore([
+                9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9,
+            ]),
+        ).toBe(190)
+    })
+
+    it('returns a number which is the sum of bowling scores', () => {
+        expect(() =>
+            calculateBowlingScore([
+                10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+            ]),
+        ).toBe(300)
+    })
+
+    it('returns a number which is the sum of bowling scores', () => {
+        expect(() =>
+            calculateBowlingScore([
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 1, 0,
+            ]),
+        ).toBe(11)
     })
 })

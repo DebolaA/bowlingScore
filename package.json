@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "calculate the score of a 10 pin bowling game",
     "main": "index.ts",
+    "type": "commonjs",
     "scripts": {
         "build": "tsc  --project tsconfig.build.json",
         "start": "nodemon src/index.ts",
